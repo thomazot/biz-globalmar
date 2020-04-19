@@ -1,0 +1,42 @@
+.loginout
+    display: flex
+    justify-content: flex-end
+    align-items: flex-end
+    color: var(--secundary-contrast)
+    text-align: right
+    font-weight: light
+    font-size: 15px
+    line-height: 1
+
+    .header &
+        @media media-max-sm
+            margin-left: 0
+
+    > span
+        @media media-max-lg
+            display: none
+
+    a
+        color: var(--secundary-contrast)
+        font-weight: bold
+
+        &:hover
+            color: var(--tertiary)
+
+        @media media-max-lg
+            padding: 6px 8px
+            border-radius: 4px
+
+    .ico
+        flex: 0 0 30px
+        width: 30px
+        height: 30px
+        color: var(--tertiary)
+
+        @media media-min-lg
+            margin-left: 5px
+
+        @media media-max-lg
+            width: 27px
+            height: 27px
+            color: var(--primary)

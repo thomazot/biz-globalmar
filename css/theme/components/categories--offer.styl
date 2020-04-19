@@ -1,0 +1,51 @@
+#categories--offer
+    &.categories
+        margin-top: 50px
+        background: none
+
+        a
+            img, svg
+                max-height: none
+                width: 100%
+                border-radius: 10px
+                transition: all .2s ease
+                object-fit: cover
+
+            &:hover
+                background: none !important
+                box-shadow: none !important
+
+        .a--0, .a--1 > span
+            display: none
+
+        .box--1
+            position: static
+            padding: 0
+            background: none
+            box-shadow: none
+            transform: none
+
+        .ul--1
+            display: flex
+            margin: -8px
+            max-width: none
+            max-height: none
+            width: auto
+            transition: all .2s ease
+
+            @media media-max-lg
+                flex-wrap: wrap
+
+            &:hover
+                .li--1
+                    opacity: .6
+
+                    &:hover
+                        opacity: 1
+
+        .li--1
+            flex: 1
+            min-width: 0
+
+            @media media-max-lg
+                flex: 1 1 330px

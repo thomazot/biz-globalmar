@@ -1,0 +1,43 @@
+.catalog-category-view
+    .category-description
+        display: none !important
+
+    .page-title
+        h1
+            margin: 0
+            color: var(--text)
+            font-weight: medium
+            font-size: 26px
+
+    @media media-min-lg
+        .col-left
+            margin: 0
+            padding: 0
+            max-width: none
+
+        .main, .col-main
+            display: contents
+
+        .main-container
+            display: grid
+            grid-template-areas: 'breadcrumb list' 'title list' 'toolbar list' 'filter list' 'filter toolbar-bottom'
+            grid-template-columns: 22% 1fr
+            grid-template-rows: repeat(3, auto) 1fr auto
+
+        .page-title
+            grid-area: title
+
+        .breadcrumb
+            grid-area: breadcrumb
+
+        .category__products
+            grid-area: list
+
+        .toolbar
+            grid-area: toolbar
+
+        .sidebar
+            grid-area: filter
+
+        .toolbar-bottom
+            grid-area: toolbar-bottom

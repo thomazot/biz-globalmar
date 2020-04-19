@@ -1,61 +1,223 @@
-@media (max-width: 992px)
-    .categories
-        .parent
-            position: relative
+.categories
+    &__show
+        order: -1
 
-            > ul
-                display: none
+    .header &
+        img
+            display: none
 
-            &:after
-                content: ''
+@media media-max-lg
+    .header
+        .categories
+            .parent
+                position: relative
 
-            > a
-                display: flex
-                min-height: 48px
-                justify-content: flex-start
-                align-items: center
+                > ul
+                    display: none
 
-            &:after
-                icon('\f054')
-                position: absolute
-                top: 0
-                right: 0
-                z-index: 10
+                &:after
+                    content: ''
+
+                > a
+                    display: flex
+                    justify-content: flex-start
+                    align-items: center
+                    min-height: 48px
+
+                &:after
+                    icon('\f054')
+
+                    position: absolute
+                    top: 0
+                    right: 0
+                    z-index: 10
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    width: 48px
+                    height: 48px
+                    background: rgba(255, 255, 255, .1)
+                    color: var(--primary-contrast)
+                    font-size: 20px
+                    transition: all .2s ease
+
+                &.on
+                    &:after
+                        transform: rotate(90deg)
+
+                    > ul
+                        display: block
+
+            .all-li--0
+                padding-bottom: 0
+
+@media media-min-lg
+    .header
+        .categories
+            --bg: rgba(255, 255, 255, .5)
+            --color: #dddddd
+
+            &
+                position: static
+                flex: 1
+                margin-bottom: 0 !important
+                min-width: 0
+                background: none
+
+            &--justify
+                .categories__all
+                    .box--1
+                        left: -70px !important
+                        z-index: 300
+                        padding: 0
+                        min-height: 440px
+                        width: 220px
+                        border-radius: 5px
+                        background: var(--primary)
+
+                        &:before
+                            position: absolute
+                            top: -9px
+                            right: 13px
+                            z-index: 10
+                            width: 20px
+                            height: 20px
+                            border-radius: 2px
+                            background: var(--primary)
+                            content: ''
+                            transform: rotate(45deg)
+
+            .a--0
+                position: relative
+                z-index: 200
                 display: flex
                 justify-content: center
                 align-items: center
-                width: 48px
-                height: 48px
-                font-size: 20px
-                background: rgba(255, 255, 255, 0.1)
-                transition: all 0.2s ease
+                padding: 0
+                height: 50px
+                color: var(--secundary-contrast)
+                white-space: nowrap
+                font-weight: regular
+                font-size: 17px
+                line-height: 1
 
-            &.on
-                &:after
-                    transform: rotate(90deg)
+                > span
+                    position: relative
+                    top: -2px
 
-                > ul
-                    display: block
+                span
+                    display: inline
+                    line-height: 1
 
-        .all-li--0
-            padding-bottom: 0
+                .ico
+                    width: 14px
+                    height: 9px
+                    color: var(--tertiary)
 
-@media (min-width: 993px)
-    .categories
-        margin-bottom: 0 !important
-        background: none
-        flex: 1
-        min-width: 0
+            .li--0
+                order: 1
+                margin-left: 20px
+                width: 100%
 
-        .a--0
-            color: var(--primary)
-            white-space: nowrap
-            font-size: 14px
-            font-weight: semibold
-            text-transform: uppercase
+                .categories--on &:before
+                    position: fixed
+                    top: 0
+                    left: 0
+                    z-index: 100
+                    width: 100%
+                    height: 100%
+                    background: var(--bg)
+                    content: ''
 
-        .li--0
-            order: 1
+                &:not(.categories__all)
+                    display: none
 
-        &__all
-            order: 2
+                &:hover .a--0
+                    background: none
+
+                    .ico
+                        fill: var(--tertiary)
+
+            &__all
+                order: 2
+
+                .all-ul
+                    &--0
+                        display: block
+                        overflow: visible
+                        padding: 0
+                        padding: 20px 0
+                        max-height: none
+
+                    &--1
+                        position: absolute
+                        top: 0
+                        bottom: 0
+                        left: 220px
+                        display: grid
+                        visibility: hidden
+                        overflow-y: auto
+                        padding: 60px 0 0
+                        max-width: 50vw
+                        width: 770px
+                        background: var(--primary-contrast)
+                        opacity: 0
+                        grid-template-columns: repeat(2, 1fr)
+
+                        &:before
+                            position: absolute
+                            top: 0
+                            left: 30px
+                            padding-top: 10px
+                            width: calc(100% - 60px)
+                            border-bottom: solid 1px var(--color)
+                            color: var(--primary)
+                            content: attr(data-name)
+                            font-weight: regular
+                            font-size: 24px
+
+                .all-li
+                    &--0
+                        padding: 0
+                        min-width: 0
+                        max-width: none
+
+                        + .all-li--0
+                            margin-top: 10px
+
+                        &:hover
+                            .all-ul--1
+                                visibility: visible
+                                opacity: 1
+
+                    &--1
+                        padding: 10px 30px
+
+                .all-a
+                    &--0
+                        margin: 0
+                        padding: 0
+                        padding: 2px 40px
+                        color: var(--primary-contrast)
+                        font-weight: semibold
+                        font-size: 16px
+
+                        &:hover
+                            background: var(--primary-hover)
+                            box-shadow: none
+
+                    &--1
+                        padding: 0
+                        color: var(--primary-hover)
+                        font-size: 20px
+
+                        &:hover
+                            box-shadow: none
+
+                    &--2
+                        padding: 0
+                        font-weight: regular
+                        font-size: 16px
+
+                        &:hover
+                            box-shadow: none

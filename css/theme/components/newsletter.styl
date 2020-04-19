@@ -1,0 +1,34 @@
+#news-footer
+    &.newsletter
+        margin: 100px auto 0
+        max-width: 'calc(100% - %s)' % gap
+        width: viewport
+
+        .input-text
+            height: 57px
+            border-radius: 10px
+            box-shadow: 0 0 5px rgba(0, 0, 0, .1)
+            font-size: 19px
+
+            &::placeholder
+                color: #99a2a9
+
+        .newsletter
+            &__text
+                .title
+                    color: var(--text)
+                    text-transform: uppercase
+                    font-weight: light
+                    font-size: 26px
+
+                strong
+                    display: block
+                    text-transform: none
+                    font-size: 17px
+
+            &__btn
+                height: 57px
+                border-radius: 10px
+                background: linear-gradient(to left, var(--secundary) 50%, var(--secundary-hover))
+                font-weight: 800
+                font-size: 19px

@@ -1,2 +1,61 @@
 .search
-    display: none
+    &__hide
+        display: flex !important
+        justify-content: center
+        align-items: center
+        height: 60px
+
+    &__input
+        box-shadow: none
+
+    &__button
+        @media media-max-sm
+            padding: 7px 8px
+            background: none
+
+            &:hover
+                background: none
+
+            .ico
+                width: 26px
+                height: 26px
+                fill: var(--primary)
+
+    @media media-min-lg
+        position: relative
+        margin-top: 15px
+        max-width: 100%
+        width: 606px
+
+        &__input
+            height: 40px !important
+            border-radius: 10px !important
+
+            &::placeholder
+                color: var(--gray)
+
+            &:focus::placeholder
+                color: transparent
+
+        &__button
+            position: absolute
+            top: 0
+            right: 0
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 0
+            width: 50px
+            height: 40px
+            background: none
+            box-shadow: none
+
+            .ico
+                width: 28px
+                height: 28px
+                fill: var(--gray)
+
+.header .search.on
+    .search__input
+        @media media-max-sm
+            height: 74px

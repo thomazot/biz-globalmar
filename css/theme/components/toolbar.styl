@@ -1,0 +1,67 @@
+.toolbar
+    &-bottom
+        .toolbar
+            .amount, .sorter, .limiter
+                display: none !important
+
+    .sort-by
+        select
+            margin-right: 15px
+            padding: 0 30px 0 0
+            height: 20px
+            border: 0
+            border-right: solid 1px var(--text)
+            border-radius: 0
+            background: none
+            background: no-repeat url(down) center right 10px
+            box-shadow: none
+            color: var(--text)
+            font-weight: light
+            font-size: 18px
+            line-height: 20px
+            appearance: none
+
+    .col-main &
+        .limiter
+            display: none
+
+        @media media-min-lg
+            flex-flow: column nowrap
+            text-align: left
+
+            .view-mode
+                .grid, .list
+                    height: 24px
+
+                strong svg
+                    fill: #0020cf
+
+            .amount
+                width: 100%
+                color: var(--text)
+                font-weight: light
+                font-size: 18px
+                opacity: 1
+
+            .sorter
+                flex-wrap: wrap
+                align-items: center
+                margin-left: 0
+                width: 100%
+                text-align: left
+
+                &:before
+                    display: block
+                    flex: 0 0 100%
+                    order: -2
+                    color: var(--text)
+                    content: 'Organizar anúncios'
+                    font-weight: medium
+                    font-size: 20px
+
+            .sort-by
+                order: -1
+                margin-left: 0
+
+                label
+                    display: none

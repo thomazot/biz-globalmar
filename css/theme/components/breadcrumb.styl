@@ -1,0 +1,22 @@
+.breadcrumb
+    &__home
+        .breadcrumb__link:before
+            display: none
+
+    &__list
+        flex-wrap: wrap
+
+    &__link, &__last
+        color: var(--text)
+        font-weight: light
+        font-size: 16px
+
+    &__sep
+        &:before
+            color: var(--text)
+            content: '>'
+            font-weight: light
+            font-size: 16px
+
+        span
+            display: none

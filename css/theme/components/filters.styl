@@ -1,0 +1,35 @@
+.filters
+    .count
+        display: none
+
+    @media media-max-lg
+        .link, .a--0
+            color: var(--primary-contrast)
+
+        &__name
+            color: var(--primary-contrast)
+            font-size: 18px
+
+    @media media-min-lg
+        .title
+            display: none
+
+        .link, .a--0
+            color: var(--text)
+            font-weight: light
+            font-size: 20px
+
+        &__filter
+            padding: 0
+            background: none
+            box-shadow: none
+
+            .li--0:not(:last-child)
+                margin: 0
+                line-height: 1.2
+
+        &__name
+            margin: 0
+            color: var(--text)
+            font-weight: medium
+            font-size: 20px

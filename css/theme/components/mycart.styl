@@ -1,0 +1,41 @@
+.mycart
+    .header &
+        margin-left: 0
+
+        &:hover .mycart__content
+            display: none !important
+
+    &__header
+        &, a
+            height: 100%
+
+        a
+            display: flex
+            justify-content: center
+            align-items: flex-end
+            height: 30px
+            color: var(--secundary-contrast)
+            font-weight: light
+            font-size: 15px
+
+            @media media-max-lg
+                padding: 6px 8px
+                height: auto
+                border-radius: 4px
+
+        .text
+            line-height: 1
+
+            @media media-max-lg
+                display: none
+
+        .ico
+            width: 30px
+            height: 30px
+            color: var(--tertiary)
+
+            @media media-min-lg
+                margin-left: 5px
+
+            @media media-max-lg
+                color: var(--primary)

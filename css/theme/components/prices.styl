@@ -1,0 +1,45 @@
+.price-box
+    margin: 0 0 5px
+
+    .old-price
+        display: none
+
+    .minimal-price, .regular-price, .special-price
+        .label
+            display: none
+
+        .price span
+            color: var(--text)
+            font-weight: light
+            font-size: 30px
+
+.price-box-parcelado
+    --color: #31d70a
+
+    &
+        margin-bottom: 10px
+
+    .preco-parcelado-sem-juros
+        + .preco-parcelado
+            display: none
+
+    .upto
+        display: none
+
+    .preco-parcelado, .preco-parcelado-sem-juros
+        &, .num span, .de span, .value span, .s-juros span
+            color: var(--color)
+            font-weight: regular
+            font-size: 16px
+
+.price-box-avista
+    --color: #31d70a
+
+    .products &
+        .price
+            display: none
+
+        .label span
+            color: var(--color)
+            font-weight: regular
+            font-size: 16px

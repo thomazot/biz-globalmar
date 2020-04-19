@@ -1,0 +1,36 @@
+<div class="footer__more">
+    <button type="button" class="footer__button">
+        <span>Mais informações</span>
+        <svg class="ico z-down">
+            <use xlink:href="#z-down" />
+        </svg>
+    </button>
+    <div class="footer__nav">
+        <div class="footer__box">
+            <h3 class="footer__title">Central de Atendimento</h3>
+            <div class="footer__content">
+                {{block type="menubuilder/output" identifier="footer-central"}}
+            </div>
+        </div>
+        <div class="footer__box">
+            <h3 class="footer__title">Tire suas Dúvidas</h3>
+            <div class="footer__content">
+                {{block type="menubuilder/output" identifier="footer-duvidas"}}
+            </div>
+        </div>
+        <div class="footer__box">
+            <h3 class="footer__title">Sobre a Globalmar</h3>
+            <div class="footer__content">
+                {{block type="menubuilder/output" identifier="footer-sobre"}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer__row">
+    {{block type="menubuilder/output" identifier="footer-nav"}}
+</div>
+<div class="footer__copyright">
+    <p>Copyright © 2015-2020 globalmar.com.br</p>
+    <p>CNPJ n.º 31.731.803/0001-40 / Av. Cruzeiro do Sul, 2318 - São Paulo, SP / CEP 02030-000</p>
+</div>

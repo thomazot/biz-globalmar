@@ -1,0 +1,21 @@
+.socials-securitys
+    &__container
+        display: flex
+        justify-content: space-around
+        align-items: center
+        margin: 0 auto
+        max-width: 'calc(100% - %s)' % (gap / 2)
+        width: viewport
+        text-align: center
+
+        .flex--a-center
+            justify-content: center
+
+        @media media-min-lg
+            padding: 0 200px
+
+    &__title
+        padding: 15px 0
+        color: var(--text)
+        font-weight: light
+        font-size: 17px

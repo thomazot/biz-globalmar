@@ -1,4 +1,51 @@
 .header
+    padding: 0
+
+    @media media-max-lg
+        padding: 15px 0
+
+    @media media-min-lg
+        display: grid
+        grid-template-areas: 'logo search search contact contact contact' 'logo search search shipping shipping shipping' 'logo nav menu user favorite cart'
+        grid-template-columns: 270px 135px 1fr 16.3% 7.97% 7.97%
+
+        .logo
+            grid-area: logo
+
+        .search
+            grid-area: search
+
+        .contact
+            grid-area: contact
+
+        .top-shipping
+            grid-area: shipping
+
+        .categories
+            grid-area: nav
+
+        .mymenu
+            grid-area: menu
+
+        .loginout
+            grid-area: user
+
+        .mywish
+            grid-area: favorite
+
+        .mycart
+            grid-area: cart
+
     &-container
         position: sticky
         top: 0
+
+        @media media-min-lg
+            background: linear-gradient(var(--secundary), var(--secundary) 50%, var(--secundary-hover))
+            box-shadow: inset 0 35px 0 var(--primary), 0 0 20px rgba(0, 0, 0, .2)
+
+        @media media-max-lg
+            background: #fff
+
+            .up &
+                transform: translateY(-115px)

@@ -1,4 +1,32 @@
 .logo
     .header &
+        margin-right: 20px
+
+        @media media-max-lg
+            margin-right: 16px
+
+        @media media-min-lg
+            height: 100%
+
+            a
+                position: relative
+                display: inline-flex
+                justify-content: flex-start
+                align-items: center
+                width: calc(100% - 60px)
+                height: 120px
+                background: var(--primary-contrast)
+                box-shadow: -100px 0 0 var(--primary-contrast), -200px 0 0 var(--primary-contrast), -300px 0 0 var(--primary-contrast), -400px 0 0 var(--primary-contrast), -500px 0 0 var(--primary-contrast), -600px 0 0 var(--primary-contrast), -700px 0 0 var(--primary-contrast), -800px 0 0 var(--primary-contrast)
+
+                &:after
+                    position: absolute
+                    top: 0
+                    left: 100%
+                    width: 0
+                    border-top: solid 120px transparent
+                    border-left: solid 60px var(--primary-contrast)
+                    content: ''
+
         img, svg
-            height: 48px
+            max-width: 100%
+            height: auto
