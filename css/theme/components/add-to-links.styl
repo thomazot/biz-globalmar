@@ -1,0 +1,25 @@
+.add-to-links
+    li:not(.link-wishlist)
+        display: none
+
+    .link-wishlist
+        .ico
+            width: 35px
+            height: 35px
+            color: #8a8a8a !important
+
+            @media media-max-sm
+                display: none
+
+        a
+            @media media-min-sm
+                position: absolute
+                top: 0
+                right: 0
+                padding: 10px 10px 0 0
+                border: 0
+                background: none
+                box-shadow: none
+
+                span
+                    display: none

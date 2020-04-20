@@ -1,0 +1,115 @@
+.reviews
+    @media media-max-sm
+        &__title
+            margin: 0
+            color: var(--text)
+            font-size: 16px
+
+    @media media-min-sm
+        margin-bottom: 50px
+        padding-bottom: 30px
+        border-radius: 0 0 10px 10px
+        background: #fff
+
+        &__title
+            padding: 16px 16px 0
+            color: var(--text)
+            font-size: 25px
+
+        &__content
+            flex-wrap: wrap
+
+        &__resume, &__add
+            flex: 1
+            min-width: 0
+
+        &__resume, &__add, &__ratings
+            background: none
+            box-shadow: none
+
+            .subtitle
+                display: none
+
+        &__resume
+            order: 1
+
+            .product-rate
+                display: grid
+                grid-template-areas: 'percent rating' 'percent amount'
+                grid-template-columns: 140px 1fr
+
+                .percent
+                    grid-area: percent
+
+                .rating-box
+                    align-self: end
+                    margin: 0
+                    grid-area: rating
+
+                .amount
+                    align-self: start
+                    padding-top: 10px
+                    grid-area: amount
+
+        &__add
+            order: 2
+
+            .subtitle
+                display: block
+                color: var(--text)
+                font-weight: medium
+                font-size: 25px
+
+            form > .title
+                display: none
+
+            input, textarea
+                border: solid 2px #e6e6e6
+                border-radius: 10px
+                box-shadow: none
+
+            .form-list label
+                display: none
+
+            .review-summary
+                justify-content: flex-start
+
+                label
+                    display: block
+
+            .btn
+                padding: 0
+                height: 50px
+                border-radius: 10px
+                background: linear-gradient(to bottom, var(--secundary) 30%, var(--secundary-hover))
+                font-weight: light
+                font-size: 22px
+                line-height: 50px
+
+        &__ratings
+            flex: 0 0 100%
+            order: 3
+
+    @media media-min-lg
+        &__content
+            display: block
+
+        &__no-reviews
+            padding-top: 0
+
+        &__resume
+            .product-rate
+                .percent .text
+                    margin-top: -5px
+                    font-size: 16px
+
+        &__ratings
+            padding-top: 0
+            padding-bottom: 0
+
+        &__no-reviews
+            overflow-y: auto
+            padding: 20px
+            max-height: 320px
+            border: solid 2px #e6e6e6
+            border-radius: 10px

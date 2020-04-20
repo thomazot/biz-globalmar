@@ -98,12 +98,6 @@
          * addSVG() - defaults
          */
         if (neon.default_SVGs !== false) {
-            var truck = {
-                'img-truck': {
-                    selector: '.frete__title',
-                    mode: 'append',
-                },
-            }
             var svgs = {
                 'img-truck': {
                     selector:
@@ -158,7 +152,6 @@
             }
             $j(document).ready(function () {
                 addSVG(svgs)
-                addSVG(truck)
             })
         }
         if (neon.addSVG !== false) {
@@ -1236,10 +1229,22 @@ $j.fn.neonTheme.custom = {
      */
     dropFrom: false,
     addSVG: {
-        'img-truck': {
-            selector: '.frete .frete__content .input-box label',
+        'z-truck': {
+            selector: '.frete .frete__title',
             mode: 'prepend',
             ratio: false,
+        },
+        'z-card-print': {
+            selector: '.prod__shop .price-box-parcelado',
+            mode: 'prepend',
+        },
+        'z-boleto-print': {
+            selector: '.prod__shop .price-box-avista',
+            mode: 'prepend',
+        },
+        'z-heart': {
+            selector: '.add-to-links .link-wishlist a',
+            mode: 'prepend',
         },
     },
 }

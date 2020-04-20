@@ -1,0 +1,207 @@
+.product-image-container
+    padding: 16px
+    background: none
+
+.product-image-gallery
+    margin: 0
+    box-shadow: none
+
+.product-image-thumbs li
+    flex: 0 0 85px
+    margin-right: 10px
+
+.more-views
+    a
+        width: 85px
+        height: 85px
+
+    img
+        height: 100%
+        object-fit: contain
+
+.product-essential
+    margin: 0
+
+.prod
+    &__img
+        margin: 0
+        border-radius: 10px 0 0
+        background: #fff
+
+        .brand
+            padding: 0 16px
+
+            a
+                opacity: 1
+
+                &:before
+                    display: block
+                    color: var(--text)
+                    content: 'Marca'
+                    font-weight: medium
+                    font-size: 25px
+
+    &__shop
+        position: relative
+        padding: 16px
+        background: #fff
+
+        @media media-min-sm
+            padding: 40px
+            border-radius: 0 10px 0 0
+
+        .price-box
+            padding: 10px 0
+
+            .minimal-price, .regular-price, .special-price
+                .price span
+                    font-size: 40px
+
+        .qty-wrapper
+            display: none !important
+
+        .add-to-links a
+            color: var(--text)
+            font-weight: regular
+            font-size: 16px
+
+        .add-to-cart-btn
+            padding: 0
+            height: 50px
+            border-radius: 10px
+            background: linear-gradient(to bottom, var(--secundary) 30%, var(--secundary-hover))
+            font-weight: light
+            font-size: 22px
+            line-height: 50px
+
+            span span
+                &:after
+                    content: ' agora'
+
+        .frete
+            &__title
+                color: var(--text)
+                font-size: 16px
+
+                span
+                    order: -1
+                    margin-left: 0
+
+        .price-box-parcelado
+            display: flex
+            align-items: flex-end
+
+            > div
+                margin: 0
+
+            .preco-parcelado, .preco-parcelado-sem-juros
+                &, .num span, .de span, .value span, .s-juros span
+                    font-size: 18px
+
+            .ico
+                margin-right: 10px
+                width: 37px
+                height: 24px
+                fill: #31d70a
+
+        .price-box-avista
+            .label
+                span
+                    display: none
+
+                &:before
+                    content: 'à vista no boleto'
+
+            .label, .price span
+                color: #31d70a
+                font-size: 18px
+
+            .ico
+                margin-right: 10px
+                margin-left: 5px
+                width: 32px
+                height: 24px
+                fill: #31d70a
+
+    &__descriptions
+        padding: 16px
+        background: #fff
+
+        .std
+            color: #8e8e8e
+            font-weight: regular
+            font-size: 14px
+
+            @media media-min-lg
+                font-size: 18px
+
+    &__name
+        h1
+            color: var(--text)
+            font-weight: light
+            font-size: 25px
+            line-height: 1
+
+        .sku
+            color: var(--text)
+            font-weight: light
+            font-size: 16px
+
+@media media-min-lg
+    .product-essential, .product-collateral, #product_addtocart_form, .prod__img
+        display: contents
+
+    .product-image-container
+        display: flex
+
+        .product-image
+            flex: 1
+            min-width: 0
+
+    .more-views
+        order: -1
+
+    .product-image-thumbs
+        display: block
+
+    .product-view
+        display: grid
+        grid-template-areas: 'image info' 'brand review' 'description review' 'products products'
+        grid-template-columns: 1fr 38%
+        grid-template-rows: repeat(2, auto) 1fr 1fr
+
+        .product-image-container
+            margin: 0
+            padding: 40px
+            border-right: solid 2px #d4d4d4
+            border-radius: 10px 0 0
+            background: #fff
+            grid-area: image
+
+        .brand
+            padding: 0 40px
+            border-right: solid 2px #d4d4d4
+            background: #fff
+            grid-area: brand
+
+        .prod
+            &__shop
+                border-bottom: solid 2px #d4d4d4
+                border-radius: 0 10px 0 0
+                grid-area: info
+
+            &__descriptions
+                padding: 40px
+                border-right: solid 2px #d4d4d4
+                border-radius: 0 0 0 10px
+                grid-area: description
+
+            &__review
+                padding: 10px
+                border-radius: 0 0 10px 0
+                background: #fff
+                grid-area: review
+
+            &__products
+                margin-top: 50px
+                grid-area: products

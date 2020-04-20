@@ -1,0 +1,63 @@
+.frete
+    &__title
+        &:before
+            content: 'Frete e Prazo de Entrega'
+
+        span
+            display: none
+
+        @media media-min-lg
+            justify-content: flex-start
+            padding: 0
+            border: 0
+            box-shadow: none
+            font-weight: light
+            font-size: 18px
+            pointer-events: none
+
+            .ico
+                order: -1
+                margin: 0
+                margin-right: 10px
+                width: 33px
+                height: 23px
+
+    &__content
+        @media media-min-lg
+            display: block
+
+    &__naosei
+        display: none
+
+    &__form
+        @media media-min-lg
+            margin-top: 10px
+            max-width: 335px
+            border: solid 2px #e3e3e3
+            border-radius: 4px
+
+            label
+                display: none
+
+            .input-text
+                height: 35px
+                border: 0
+                box-shadow: none
+
+    &__actions .btn
+        @media media-min-lg
+            display: flex
+            padding: 0
+            height: 35px
+            background: none
+            box-shadow: none
+            color: var(--text)
+            text-transform: uppercase
+            font-weight: medium
+            font-size: 16px
+
+            &:before
+                content: 'Calcular'
+
+            span
+                display: none
