@@ -15,12 +15,18 @@
 			@preco(avista)
 
             @brinde
-            @variacoes
+        
+        	@variacoes
         
             @programa-fidelidade(Compre e Ganhe)
             @bt(comprar)
             @links
-        
+        	
+        	@if(fretegratis)
+        	<div class="prod__fretegratis">
+                 Frete Grátis
+        	</div>
+        	@endif(fretegratis)
             @simulador-frete    
 		@else(is_disponivel)		
 			<div class="prod__esgotado">

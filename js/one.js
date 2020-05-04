@@ -1246,6 +1246,10 @@ $j.fn.neonTheme.custom = {
             selector: '.add-to-links .link-wishlist a',
             mode: 'prepend',
         },
+        'z-close': {
+            selector: '.modal__close',
+            mode: 'html',
+        },
     },
 }
 
@@ -1344,6 +1348,18 @@ $j(document)
         // Scrolling
         scrollTop()
 
+        $('.banner a').each(function () {
+            if ($(this).attr('href').indexOf('javascript') !== -1) {
+                $(this).attr(
+                    'href',
+                    $(this)
+                        .attr('href')
+                        .replace('http://', '')
+                        .replace('htts://', '')
+                )
+            }
+        })
+
         // Menu Categories
         $('.categories .parent').click(function (event) {
             if ($(event.currentTarget).hasClass('parent')) {
@@ -1371,6 +1387,12 @@ $j(document)
 
         $('.footer__button').click(function () {
             $(this).closest('.footer__more').toggleClass('on')
+        })
+
+        $('.prod__shop .price-box-avista').each(function () {
+            $(this).append(
+                '<a href="javascript:modal_open(\'lightbox-payment-send\')" >Mais informações</a>'
+            )
         })
     })
     .on('resizeStop', function (e) {
