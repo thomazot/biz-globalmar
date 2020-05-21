@@ -1,0 +1,26 @@
+rf-color = #0051c7
+
+.categories__show
+    padding: 5px
+    height: auto
+    border: solid 2px rf-color
+    border-radius: 4px
+    background: none
+    color: rf-color
+
+@media media-max-sm
+    .search__button .ico, .loginout .ico, .mycart__header .ico
+        fill: rf-color
+
+@media media-max-lg
+    .product-image-thumbs
+        display: flex
+        justify-content: center
+
+        li
+            flex: 0 0 auto
+
+            &, a
+                min-width: 0
+                width: 60px
+                height: 60px

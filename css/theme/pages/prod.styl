@@ -174,8 +174,8 @@
         display: grid
         grid-template-areas: 'image info' 'brand review' 'description review' 'products products'
         grid-template-columns: 1fr 38%
-
-        // grid-template-rows: repeat(2, auto) 1fr 1fr
+        grid-template-rows: repeat(2, auto) 1fr auto
+        
         .prod__img > .product-image-container
             margin: 0
             padding: 40px
@@ -184,7 +184,7 @@
             background: #fff
             grid-area: image
 
-        .brand
+        .prod__brand
             padding: 0 40px
             border-right: solid 2px #d4d4d4
             background: #fff

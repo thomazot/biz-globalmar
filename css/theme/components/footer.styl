@@ -46,9 +46,6 @@
             height: 10px
             transform: rotate(180deg)
 
-        @media media-max-lg
-            display: none
-
     @media media-max-lg
         text-align: center
 
@@ -83,20 +80,18 @@
                 margin-left: 10%
 
     &__nav
-        @media media-max-lg
-            padding-bottom: 30px
+        overflow: hidden
+        max-height: 0
+        transition: all .2s ease
 
         @media media-min-lg
             display: flex
             justify-content: flex-start
             align-items: flex-start
-            overflow: hidden
-            max-height: 0
-            transition: all .2s ease
 
-            .on &
-                padding-bottom: 30px
-                max-height: 500px
+        .on &
+            padding-bottom: 30px
+            max-height: 500px
 
     &__title
         padding-bottom: 10px

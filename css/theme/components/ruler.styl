@@ -2,13 +2,18 @@
     --color: #344653
 
     &
-        display: flex
-        justify-content: flex-start
-        align-items: center
         color: var(--color)
         font-weight: light
         font-size: 19px
         line-height: 1
+
+        @media media-min-sm
+            display: flex
+            justify-content: flex-start
+            align-items: center
+
+        @media media-max-sm
+            text-align: center
 
     .ico
         margin-right: 10px
