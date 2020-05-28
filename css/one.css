@@ -916,7 +916,7 @@ form.searchautocomplete {
 }
 .products__item {
   display: flex;
-  flex: 1 1 285%;
+  flex: 1 1 285px;
   margin: 0;
   padding: 1rem;
   min-width: 0;
