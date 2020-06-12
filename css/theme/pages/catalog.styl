@@ -27,9 +27,9 @@
 
         .main-container
             display: grid
-            grid-template-areas: 'breadcrumb list' 'title list' 'toolbar list' 'filter list' 'filter toolbar-bottom'
+            grid-template-areas: 'breadcrumb list' 'title list' 'toolbar list' 'filter list' 'banner list' 'banner toolbar-bottom'
             grid-template-columns: 22% 1fr
-            grid-template-rows: repeat(3, auto) 1fr auto
+            grid-template-rows: repeat(5, auto) 1fr auto
 
         .page-title
             grid-area: title
@@ -39,6 +39,10 @@
 
         .category__products
             grid-area: list
+
+        .category-image
+            margin: 20px 20px 0 0
+            grid-area: banner
 
         .toolbar
             grid-area: toolbar
