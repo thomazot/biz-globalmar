@@ -11908,6 +11908,19 @@ input[type='search']::-webkit-search-results-decoration {
   padding: 0.94rem;
   min-width: 0;
 }
+#banner__banner-categories {
+  margin: 3.13rem -0.63rem;
+}
+#banner__banner-categories img {
+  min-width: none;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+#banner__banner-categories .banner__item {
+  overflow: hidden;
+  margin: 0.63rem;
+  border-radius: 10px;
+}
 
 .breadcrumb__home .breadcrumb__link:before {
   display: none;
